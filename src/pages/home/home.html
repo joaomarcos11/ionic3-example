@@ -8,11 +8,19 @@
 </ion-header>
 
 <ion-content padding>
-  <h3>Ionic Menu Starter</h3>
 
-  <p>
+  <ion-list>
+    <button ion-item *ngFor="let p of produtos" (click)="getProdutosInfo(p.id)">
+      {{ p.nome }}
+    </button>
+  </ion-list>
+
+  <!--
+    <h3>Ionic Menu Starter</h3>
+    <p>
     If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
   </p>
 
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+  <button ion-button primary menuToggle (click)="goToTestPage()">Ir para Test Page</button>
+  <button ion-button secondary menuToggle>Toggle Menu</button> -->
 </ion-content>
